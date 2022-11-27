@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table width="700 px">
+        <tr>
+            <td valign="top"><p><b>Простая форма поиска с вариантами:</b></p>
+                <form action="http://fe.it-academy.by/TestForm.php" method="post" name="user_data"><fieldset>
+                    <legend>Строка поиска</legend>
+                    <input type="text" maxlength="10">&nbsp;<button type="sumbit">Искать</button><br>
+                    <input type="radio" name="search" value="site"><label>на сайте</label><input type="radio" name="search" value="google"><label>в google</label><br>
+                    <i>Длинна запроса не более 10 символов</i>
+                </fieldset></form>
+            </td>
+            <td valign="top"><p><b>Просая форма поиска с вариантами:</b></p>
+                <form action="http://fe.it-academy.by/TestForm.php" method="get" name="user_data1"><fieldset>
+                    <legend>Стока поиска</legend>
+                    <input type="text" avtofocus>*&nbsp;<input type="submit" value="Искать"><br>
+                    <input type="radio" name="search1" value="site"><label>на сайте</label><input type="radio" name="search1" value="google"><label>в google</label><br>
+                    <i>* - обязательное поле</i><br>
+                    <i>Автофокус в поле поиска</i>
+                </fieldset></form>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top"><p><b>Простая форма авторизации:</b></p>
+                <form action="http://fe.it-academy.by/TestForm.php" method="post" name="user_data2"><fieldset>
+                    <legend>Авторизируйтесь</legend>
+                    <label><input type="text" placeholder="Логин..." name="login">* Логин</label><br>
+                    <label><input type="password" placeholder="Пароль..." name="password">* Пароль</label><br>
+                    <label><input type="checkbox" name="online">Оставайся в системе</label><br>
+                    <input type="submit" value="Войти"><br>
+                    <i>* - обязательное поле</i>
+                </fieldset></form>
+            </td>
+            <td valign="top"><p><b>Опрос(голосование):</b></p>
+                <form action="http://fe.it-academy.by/TestForm.php" method="post" name="user_data3"><fieldset>
+                    <legend>Как вам?</legend>
+                    <label><input type="radio" name="questioning" value="1">ничего</label><br>
+                    <label><input type="radio" name="questioning" value="2">неплохо</label><br>
+                    <label><input type="radio" name="questioning" value="3">хорошо</label><br>
+                    <label><input type="radio" name="questioning" value="4">супер</label><br>
+                    <input type="submit" value="Отправить"><br>
+                    <i>Есть скрытое поле</i><br>
+                    <i>name=date_voite, value="2013.12.31"</i>
+                </fieldset></form>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top"><p><b>Отзыв:</b></p>
+                <form action="http://fe.it-academy.by/TestForm.php" method="post" name="user_data4"><fieldset>
+                    <legend>Оставьте Ваш отзыв</legend>
+                    <label><input type="text" name="user_name">* Имя</label><br>
+                    <label><input type="email" name="user_email">* e-mail</label><br>
+                    <textarea placeholder="Форма отправки"></textarea><br>
+                    <input type="submit" value="Отправить"><br>
+                    <i>* - обязательное поле</i><br>
+                    <i>поле email - с проверкой методом POST</i>
+                </fieldset></form>
+            </td>
+            <td valign="top"><p><b>Выпадающий и мульти списки:</b></p>
+                <form action="http://fe.it-academy.by/TestForm.php" method="post" name="user_data5"><fieldset>
+                    <legend>Города РБ</legend>
+                </fieldset></form>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
