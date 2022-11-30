@@ -45,7 +45,7 @@
                     <label><input type="radio" name="questioning" value="2">неплохо</label><br>
                     <label><input type="radio" name="questioning" value="3">хорошо</label><br>
                     <label><input type="radio" name="questioning" value="4">супер</label><br>
-                    <input type="submit" value="Отправить"><br>
+                    <input type="submit" value="Отправить"><input type="text" name="data_voite" value="2013.12.31" hidden><br>
                     <i>Есть скрытое поле</i><br>
                     <i>name=date_voite, value="2013.12.31"</i>
                 </fieldset></form>
@@ -57,7 +57,7 @@
                     <legend>Оставьте Ваш отзыв</legend>
                     <label><input type="text" name="user_name">* Имя</label><br>
                     <label><input type="email" name="user_email">* e-mail</label><br>
-                    <textarea placeholder="Форма отправки"></textarea><br>
+                    <textarea placeholder="Форма отправки" name="textarea"></textarea><br>
                     <input type="submit" value="Отправить"><br>
                     <i>* - обязательное поле</i><br>
                     <i>поле email - с проверкой методом POST</i>
@@ -66,12 +66,54 @@
             <td valign="top"><p><b>Выпадающий и мульти списки:</b></p>
                 <form action="http://fe.it-academy.by/TestForm.php" method="post" name="user_data5"><fieldset>
                     <legend>Города РБ</legend>
+                    <select name="select">
+                        <option value="sel1">Брест</option>
+                        <option value="sel2">Минск</option>
+                        <option value="sel3">Витебск</option>
+                        <option value="sel4">Москва</option>
+                        <option value="sel5">Рязань</option>
+                        <option value="sel6">Санкт-Петербург</option>
+                    </select>
+                    <select name="list" size="8">
+                        <optgroup label="Города РБ">
+                            <option value="RB1">Брест</option>
+                            <option value="RB2">Минск</option>
+                            <option value="RB3">Витебск</option>
+                        </optgroup>
+                        <optgroup label="Городы России">
+                            <option value="rf1">Москва</option>
+                            <option value="rf2">Рязань</option>
+                            <option value="rf3">Санкт-Петербург</option>
+                        </optgroup>
+                        <input type="submit" value="Ok">
+                    </select>
                 </fieldset></form>
             </td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
+            <td valign="top"><p><b>Загрузка файлф на сервер:</b></p>
+                <form action="http://fe.it-academy.by/TestForm.php" enctype="multipart/form-data" method="post" name="user_data6"><fieldset>
+                    <legend>Upload</legend>
+                    Файл:<br>
+                    <input type="file" value="Choose File" lang="en" name="file"></inpyt><br>
+                    Срок хранения (года):<br>
+                    <input type="text"><input type="submit" value="Загрузить"><br>
+                    <i>Метод POST</i><br>
+                    <i>В теге form используйте атрибут<br>
+                    enctype="multipart/form-data" для отправки<br>
+                    файла на сервер</i>
+                </fieldset></form>
+            </td>
+            <td valign="top"><p><b>Валидация данных HTML5:</b></p>
+                <form action="http://fe.it-academy.by/TestForm.php" method="post" name="user_data5"><fieldset>
+                    <legend>Строка поиска</legend>
+                    <input type="text" placeholder="Только русские буквы" name="name" pattern="[А-Яа-я]{0,}" required><br>
+                    <i>Телефонный номер в формате</i><br>
+                    <i>+XXX-XX-XXXXXXX, где X - любое число</i><br>
+                    <input type="tel" value="+375-29-1234567" pattern="^\+\d{3}-\d{2}-\d{7}$" name="phone_num"><br>
+                    <input type="submit" value="Проверить">
+                </fieldset></form>
+            </td>
         </tr>
     </table>
 </body>
