@@ -26,18 +26,18 @@
                 <label><input type="text" name="year" value="2000" minlength="4" maxlength="4" pattern="[0-9]{4}">text: Год рождения 4-е цифры</label><br>
                 <label>
                     <select name="month">
-                        <option>Январь</option>
-                        <option>Февраль</option>
-                        <option>Март</option>
-                        <option>Апрель</option>
-                        <option>Май</option>
-                        <option>Июнь</option>
-                        <option>Июль</option>
-                        <option>Август</option>
-                        <option>Сентябрь</option>
-                        <option>Октябрь</option>
-                        <option>Ноябрь</option>
-                        <option>Декабрь</option>
+                        <option value="1">Январь</option>
+                        <option value="2">Февраль</option>
+                        <option value="3">Март</option>
+                        <option value="4">Апрель</option>
+                        <option value="5">Май</option>
+                        <option value="6">Июнь</option>
+                        <option value="7">Июль</option>
+                        <option value="8">Август</option>
+                        <option value="9">Сентябрь</option>
+                        <option value="10">Октябрь</option>
+                        <option value="11">Ноябрь</option>
+                        <option value="12">Декабрь</option>
                     </select>
                     select: Месяц рождения
                 </label><br>
@@ -45,11 +45,11 @@
             </fieldset>
             <label>
                 <select name="Nationality" required>
-                    <option>РБ</option>
-                    <option>РФ</option>
-                    <option>Литва</option>
-                    <option>Латвия</option>
-                    <option>Польша</option>
+                    <option value="1">РБ</option>
+                    <option value="2">РФ</option>
+                    <option value="3">Литва</option>
+                    <option value="4">Латвия</option>
+                    <option value="5">Польша</option>
                 </select>
                 (Национальность - выбор одного значения из списка, обязательное поле)
             </label><br>
@@ -71,19 +71,19 @@
                 <label>array: select multiple<br>
                     <select name="pets" multiple size="12">
                         <optgroup label="Попугаи" name="parrots">
-                            <option>Волнистый</option>
-                            <option>Ара</option>
-                            <option>Неразлучник</option>
+                            <option value="1">Волнистый</option>
+                            <option value="2">Ара</option>
+                            <option value="3">Неразлучник</option>
                         </optgroup>
                         <optgroup label="Рыба" name="fish">
-                            <option>Караси</option>
-                            <option>Окуни</option>
-                            <option>Осётр</option>
+                            <option value="1">Караси</option>
+                            <option value="2">Окуни</option>
+                            <option value="3">Осётр</option>
                         </optgroup>
                         <optgroup label="Птицы" name="birds">
-                            <option>Стая ворон</option>
-                            <option>Аист</option>
-                            <option>Архиоптерикс</option>
+                            <option value="1">Стая ворон</option>
+                            <option value="2">Аист</option>
+                            <option value="3">Архиоптерикс</option>
                         </optgroup>
                     </select>
                 </label>
