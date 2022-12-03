@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">Заполните анкету</h1>
+    <form action="http://fe.it-academy.by/TestForm.php" method="post" name="Questionnaire">
+        <fieldset>
+            <legend>Личные данные</legend>
+            <label><input type="text" name="last_name" placeholder="Фамилия" maxlength="25" autofocus required pattern="[А-я]{0,25}">text: Только кириллица, без пробелов, длина поля 25, обязательное поле, автофокус на данном поле)</label><br>
+            <label><input type="text" name="first_name" placeholder="Имя" maxlength="20" required pattern="[А-я]{0,20}">text: Только кириллица, без пробелов, длина поля 20, обязательное поле)</label><br>
+            <label><input type="text" name="3_name" placeholder="Отчество" maxlength="24" required pattern="[А-я]{0,24}">text: Только кириллица, без пробелов, длина поля 24, обязательное поле)</label><br>
+            <fieldset>
+                <legend>Паспортные данные</legend>
+                <label for="series">text: Серия - только заглавные две латинские буквы с длиной 2 и максимальным количеством символов 2, количество букв не менее 2, обязательное поле</label><br>
+                <label for="number">text: Номер паспорта - только цифры с длиной 7 и максимальным количеством символов 7, количество цифр не менее 7, обязательное поле</label><br>
+                <input type="text" name="series" id="series" placeholder="AA" minlength="2" maxlength="2" pattern="[A-Z]{2}" required>
+                <input type="text" name="number" id="number" placeholder="1234567" minlength="7" maxlength="7" pattern="[0-9]{7}" required>
+            </fieldset>
+            <fieldset>
+                <legend>Дата рождения</legend>
+                <label><input type="text" name="year" value="2000" minlength="4" maxlength="4" pattern="[0-9]{4}">text: Год рождения 4-е цифры</label><br>
+                <label>
+                    <select name="month">
+                        <option>Январь</option>
+                        <option>Февраль</option>
+                        <option>Март</option>
+                        <option>Апрель</option>
+                        <option>Май</option>
+                        <option>Июнь</option>
+                        <option>Июль</option>
+                        <option>Август</option>
+                        <option>Сентябрь</option>
+                        <option>Октябрь</option>
+                        <option>Ноябрь</option>
+                        <option>Декабрь</option>
+                    </select>
+                    select: Месяц рождения
+                </label><br>
+                <label><input type="number" min="1" max="31" step="1" name="day">number: Диапазон от 1 до 31 с шагом 1</label>
+            </fieldset>
+            <label>
+                <select name="Nationality" required>
+                    <option>РБ</option>
+                    <option>РФ</option>
+                    <option>Литва</option>
+                    <option>Латвия</option>
+                    <option>Польша</option>
+                </select>
+                (Национальность - выбор одного значения из списка, обязательное поле)
+            </label><br>
+            <label>Адрес<br>
+            <textarea></textarea>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Интересы</legend>
+            <fieldset>
+                <legend>array: Хобби</legend>
+                <label><input type="checkbox" value="fishing">Рыбалка</label><br>
+                <label><input type="checkbox" value="Astronomy">Астрономия</label><br>
+                <label><input type="checkbox" value="Diving">Дайвинг</label><br>
+                <label><input type="checkbox" value="Stamps">Марки</label>
+            </fieldset>
+            <fieldset>
+                <legend>Домашние животные (возможность выбора нескольких вариантов):</legend>
+                <label>array: select multiple<br>
+                    <select name="pets" multiple size="12">
+                        <optgroup label="Попугаи" name="parrots">
+                            <option>Волнистый</option>
+                            <option>Ара</option>
+                            <option>Неразлучник</option>
+                        </optgroup>
+                        <optgroup label="Рыба" name="fish">
+                            <option>Караси</option>
+                            <option>Окуни</option>
+                            <option>Осётр</option>
+                        </optgroup>
+                        <optgroup label="Птицы" name="birds">
+                            <option>Стая ворон</option>
+                            <option>Аист</option>
+                            <option>Архиоптерикс</option>
+                        </optgroup>
+                    </select>
+                </label>
+            </fieldset>
+        </fieldset>
+        <fieldset>
+            <legend>Данные для входа и восстановления пароля</legend>
+            <label><input type="text" name="login" placeholder="Логин" minlength="5" maxlength="20" pattern="[A-z]{5,20}" required>text: Только латиница, без пробелов, не менее 5 символов, длинна поля 20, обязательное полне)</label><br>
+            <label><input type="password" name="password" placeholder="Пароль" minlength="10" maxlength="20" required pattern="[A-z]{10,20}" autocomplete="new-password">password: Только латиница, без пробелов, не менее 10 символов, длина поля 20, обязательное поле, отключить автозаполнение</label>
+        </fieldset>
+        <fieldset>
+            <legend>Координаты:</legend>
+            <label><input type="email" placeholder="Введите адрес почты" name="E-mail_address">email: проверка должна осуществляться при помощи новых атрибутов тега &lt;input&gt;)</label><br>
+            <label><input type="url" placeholder="Введите адрес сайта" name="website_address">url: проверка должна осуществляться при помощи новых атрибутов тега &lt;input&gt;</label>
+        </fieldset>
+        <fieldset>
+            <legend>Цифры</legend>
+            <label><input type="number" min="-2.5" max="2.5" step="0.1" name="diapason">number: Диапазон от -2,5 до 2,5 с шагом 0,1</label><br>
+            <label><input type="range" max="10" min="1" step="-1" name="scale">range: Максимальное 10 минимальное 1</label>
+        </fieldset>
+        <fieldset>
+            <legend>Кнопки управления</legend>
+            <input type="submit" valur="Отправить" name="enter">&nbsp;<input type="reset" value="Сбросить" name="reset"><br>
+            <label><a href="#no_scroll"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAEUklEQVR42o2UbUybVRTHO3X6wfjNRLNo/OC38cU8LWNVwDEM2UxwOnUmmqGjaXldpsJEqtkUgaBMGWwqjEFAxA3Gpm6OlxB5cxmsvMg7MiwwttKHtrS09AVKn/6958JoMKPbSf557nOfe373PPeec2TBTEga2Cok9W8TkvrkQmJvhJDYw9StEBJuPBOmbn40iGtQqJKpgIFbheR+vZAyIpLYJpMM3s5UJNd0RqrV6ocfFPi8kDR4Skgdm4/MuCUdyLfhcLkHpy+bUNZghLZ6Ee8W2BGj/VdSpAw5hQRdU5imJYJt8Egw6HMMWi8cmUZ84RzqrrsxftsF26IXl65ZuOyuFUyLHrT0O3C03ISdH42DRT+q1DTFEnyzSOsjM6al3DobBidduGNegsGyvAp0rmDR7aMxzXHdvONGRbMFez676RcSdeM71Y3hDP7Q/8D9xcKRSXxVY8OA3omxGTeJgyx2LyS/n2vBuUJza99dGJl2obTBgvC0fyBoOn9i4CeYtqxBe5Xy1BHboZNGNPctoGvMgRtMBJgxLWHF58ddkyQ/TDZ+NLSO668hO9LLRISmDi6wqPcx8GMylkJbmQpeztBLp67Mo7HHiqYeG3fUz3oC0IBR5OtHRGvrdVaU1hvYhY5LioRrlfvic54i8Dam1tgcC6qa51DbbuYOw1NO+Fh0wWzK6EHR7yLiTnvwev4SlFo7WI73RKmqQgksZ7mpP1Q0jzNXjShvFNE3scgjvZ/Rxq3DXrx9EnjpC0B5zAfGM0Rpat4kcAQlfsqPIr6pNeCPLiuWvRIe1Ja8flR2rIJfPC5BSB6y7tbUfLAOPlgwj7RSI76uNeF8uw1XdQ54lgNR25wSpuYkTIiAxwtuZ1qAzPNAfAkQ/iWDr4GjNefiZVT7VKYx2W7sP+HC/vxVJZd6sOAKgMvauDPX8G1wS60IzEVksedxHzvj7tlX1FXvyaihUO2HaZ2IzpHWFfeDxMAIgFs3B+/KBnYz7ch0QdB09ceoiqNl1KWooYSlzUh78nzYuyZVie++Eaf/7ENMrg/kRyLGDk1b7YH4zO0yMupSitQha2yOGXFFdrzPlF7hwKzVB4db4udb3eHBwUIH18D0Cp/PvuCktdyHfENTBhyRqho1s6c5mFofq/WSXUdHcbjYiPSzIj4pF5FbY0ZerRmZlSJVFs1zZZ0zIe+CGZ9W8HfuQ75ydcdvjBXC9LjsroVq2rbLE7v/fO3YqPR5xQyyqmc36pcN4/V3Wks+ioROXYyq5C0GfXJDI6IXpbo+RJGoa31VO4i0kls4UWfEtxfFe4q+0Rpaq0i4rtur+v4Nxnj2nq2TjkSpbniBdanKiA//Xngne0zSnp3AdxcNKPxVJPExzdE3tsZBv0+REpQ3n82MIqfWR12KGgrVviJJZ4j6uNdKYuNZSim6/bWLCqHf3xBpEPgW2p26FDUUqn0qU6ooSn7KU0opun26qMCZBuw/G0GAr3mHnKsAAAAASUVORK5CYII="></a> - при нажатии на эту кнопку ничего не происходит</label>
+        </fieldset>
+    </form>
+</body>
+</html>
