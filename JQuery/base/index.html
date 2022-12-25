@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("css1.css");
+    </style>
+</head>
+<body>
+    <table>
+        <caption>ДАННЫЕ О СОТРУДНИКАХ</caption>
+            <tr>
+                <th>ФИО</th>
+                <th>пол</th>
+                <th>должность</th>
+                <th>дата рож.</th>
+                <th>Данные 01</th>
+                <th>Данные 02</th>
+            </tr>
+            <tr id="qwe" class="qqq">
+                <td>Иванов Иван Иванович</td>
+                <td>М</td>
+                <td>начальник</td>
+                <td>01.01.1960</td>
+                <td>4567</td>
+                <td>3453</td>
+            </tr>
+            <tr id="qwe1" class="qqq">
+                <td>Петрова Илонна Петрова</td>
+                <td>Ж</td>
+                <td>секретарь</td>
+                <td>01.01.1989</td>
+                <td>98795</td>
+                <td>46523</td>
+            </tr>
+            <tr id="qwe2" class="qqq">
+                <td>Сидоров Илья Игоревич</td>
+                <td>М</td>
+                <td>бухгалтер</td>
+                <td>01.01.1979</td>
+                <td>743434</td>
+                <td>987979</td>
+            </tr>
+            <tr id="qwe3" class="qqq">
+                <td>Пупин Фёдор Фёдорович</td>
+                <td>М</td>
+                <td>водитель</td>
+                <td>01.01.1963</td>
+                <td>74323434</td>
+                <td>9232379</td>
+            </tr>
+            <tr id="qwe4" class="qqq">
+                <td>Крупин Сергей Иванович</td>
+                <td>М</td>
+                <td>водитель 2</td>
+                <td>01.01.1983</td>
+                <td>3234534</td>
+                <td>923123379</td>
+            </tr>
+    </table>
+    <input id="zaq" type="button" value="Нет скрытых строк">
+
+
+    <script
+        src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function($){
+            $('#qwe').click(function(){
+                $('#qwe').hide();
+            });
+            $('#qwe1').click(function(){
+                $('#qwe1').hide();
+            });
+            $('#qwe2').click(function(){
+                $('#qwe2').hide();
+            });
+            $('#qwe3').click(function(){
+                $('#qwe3').hide();
+            });
+            $('#qwe4').click(function(){
+                $('#qwe4').hide();
+            });
+            $('#zaq').click(function(){
+                $('tr').show();
+            })
+            $('.qqq').click(function(){
+                $('#zaq').prop('value', 'Показать весь список')
+            })
+            $('#zaq').click(function(){
+                $('#zaq').prop('value', 'Нет скрытых строк')
+            })
+        });
+    </script>
+</body>
+</body>
+</html>
