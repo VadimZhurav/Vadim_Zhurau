@@ -20,7 +20,7 @@
                 <th>Данные 01</th>
                 <th>Данные 02</th>
             </tr>
-            <tr id="qwe" class="qqq">
+            <tr id="hide" class="open">
                 <td>Иванов Иван Иванович</td>
                 <td>М</td>
                 <td>начальник</td>
@@ -28,7 +28,7 @@
                 <td>4567</td>
                 <td>3453</td>
             </tr>
-            <tr id="qwe1" class="qqq">
+            <tr id="hide1" class="open">
                 <td>Петрова Илонна Петрова</td>
                 <td>Ж</td>
                 <td>секретарь</td>
@@ -36,7 +36,7 @@
                 <td>98795</td>
                 <td>46523</td>
             </tr>
-            <tr id="qwe2" class="qqq">
+            <tr id="hide2" class="open">
                 <td>Сидоров Илья Игоревич</td>
                 <td>М</td>
                 <td>бухгалтер</td>
@@ -44,7 +44,7 @@
                 <td>743434</td>
                 <td>987979</td>
             </tr>
-            <tr id="qwe3" class="qqq">
+            <tr id="hide3" class="open">
                 <td>Пупин Фёдор Фёдорович</td>
                 <td>М</td>
                 <td>водитель</td>
@@ -52,7 +52,7 @@
                 <td>74323434</td>
                 <td>9232379</td>
             </tr>
-            <tr id="qwe4" class="qqq">
+            <tr id="hide4" class="open">
                 <td>Крупин Сергей Иванович</td>
                 <td>М</td>
                 <td>водитель 2</td>
@@ -61,7 +61,7 @@
                 <td>923123379</td>
             </tr>
     </table>
-    <input id="zaq" type="button" value="Нет скрытых строк">
+    <input id="button" type="button" value="Нет скрытых строк">
 
 
     <script
@@ -71,29 +71,29 @@
     </script>
     <script>
         $(document).ready(function($){
-            $('#qwe').click(function(){
-                $('#qwe').hide();
+            $('#hide').click(function(){
+                $('#hide').hide();
             });
-            $('#qwe1').click(function(){
-                $('#qwe1').hide();
+            $('#hide1').click(function(){
+                $('#hide1').hide();
             });
-            $('#qwe2').click(function(){
-                $('#qwe2').hide();
+            $('#hide2').click(function(){
+                $('#hide2').hide();
             });
-            $('#qwe3').click(function(){
-                $('#qwe3').hide();
+            $('#hide3').click(function(){
+                $('#hide3').hide();
             });
-            $('#qwe4').click(function(){
-                $('#qwe4').hide();
+            $('#hide4').click(function(){
+                $('#hide4').hide();
             });
-            $('#zaq').click(function(){
+            $('#button').click(function(){
                 $('tr').show();
             })
-            $('.qqq').click(function(){
-                $('#zaq').prop('value', 'Показать весь список')
+            $('.open').click(function(){
+                $('#button').prop('value', 'Показать весь список')
             })
-            $('#zaq').click(function(){
-                $('#zaq').prop('value', 'Нет скрытых строк')
+            $('#button').click(function(){
+                $('#button').prop('value', 'Нет скрытых строк')
             })
         });
     </script>
